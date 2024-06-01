@@ -1,15 +1,22 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Estrutura from "./components/form/Estructure";
-import Container from "./components/layout/Container";
-import Welcome from './components/pages/Welcome';
 
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+//layout
+import Container from "./components/layout/Container"
+
+//pages
+import Welcome from './components/pages/Welcome';
+import Inscrito from  './components/pages/Inscrito'
 
 function App() {
 
   return (
     <Router>
       <Container customClass="minHeight">
-        <Welcome />
+        <Routes>
+          <Route path='/' element={<Welcome />} />
+          <Route path='/Inscrito' element={<Inscrito />} />
+        </Routes>
       </Container>
     </Router>
   );
