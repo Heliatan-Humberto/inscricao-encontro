@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/inscricao-encontro/static/css/main.5aa918f5.css",
+    "main.js": "/inscricao-encontro/static/js/main.27ff9177.js",
+    "index.html": "/inscricao-encontro/index.html",
+    "main.5aa918f5.css.map": "/inscricao-encontro/static/css/main.5aa918f5.css.map",
+    "main.27ff9177.js.map": "/inscricao-encontro/static/js/main.27ff9177.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5aa918f5.css",
+    "static/js/main.27ff9177.js"
+  ]
+}
