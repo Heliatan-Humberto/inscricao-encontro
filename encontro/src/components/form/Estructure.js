@@ -20,7 +20,6 @@ function Estrutura({ handleSubmit, listaData }) {
 
     return (
         <form className={styles.form}>
-            <p>teste</p>
             <Input
             type="text"
             text="Nome"
@@ -29,13 +28,27 @@ function Estrutura({ handleSubmit, listaData }) {
             handleOnChange=""
             value={lista.nome} />
             <Input
+            type="Date"
+            text="Data de nascimento"
+            name="nascimento"
+            placeholder="DD/MM/AAAA" 
+            handleOnChange={handleChange}
+            value=""
+           /><Input
            type="number"
-           text="Data de nacimento"
-           name="nacimento"
-           placeholder="DD/MM/AAAA" 
+           text="Telefone"
+           name="telefone"
+           placeholder="(xx)xxxxx-xxxx" 
            handleOnChange={handleChange}
            value=""
            />
+           <Input
+            type="text"
+            text="Email"
+            name="email"
+            placeholder="Digite seu Email"
+            handleOnChange=""
+            value={lista.nome} />
             <SubmitButton text='Inscrever-se' />
         </form>
     )
