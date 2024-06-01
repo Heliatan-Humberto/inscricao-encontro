@@ -1,15 +1,16 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Estrutura from "./components/form/Estructure";
+import Container from "./components/layout/Container";
 
-import './App.css';
-
-import Input from './components/form/Input';
-import ContainerForm from './components/container/ContainerForm'
 
 function App() {
 
   return (
-    <>
-    <ContainerForm />
-    </>
+    <Router>
+      <Container customClass="minHeight">
+        <Estrutura />
+      </Container>
+    </Router>
   );
 }
 
