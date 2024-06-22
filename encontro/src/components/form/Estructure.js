@@ -4,19 +4,27 @@ import { useEffect, useState } from 'react'
 
 import Input from "./Input"
 import SubmitButton from "./SubmitButton"
+import Message from "../layout/Message"
 
 
 function Estrutura({ handleSubmit, listData }) {
+
     const [list, setList] = useState(listData || {})
+    const [message, setMessage] = useState()
+    const [type, setType] =useState()
 
     const submit = (e) => {
+
         e.preventDefault();
+
         if (validarDados()) {
             handleSubmit(list);
         } else {
-            alert('Por favor, insira os dados válidos.')
+            setMessage('Por favor, insira os dados válidos.')
+            setType('error')
         }
     }
+
 
     function handleChange(e) {
         setList({ ...list, [e.target.name]: e.target.value })
@@ -35,7 +43,8 @@ function Estrutura({ handleSubmit, listData }) {
         return /^\d{11}$/.test(Telefone)
     }
 
-    return (
+    return (<>
+        {message && <Message type="error" msg={message} />}
         <form onSubmit={submit} className={styles.form}>
             <Input
             type="text"
@@ -70,7 +79,7 @@ function Estrutura({ handleSubmit, listData }) {
             />
             <SubmitButton text='Inscrever-se' />
         </form>
-    )
+    </>)
 }
 
 export default Estrutura
