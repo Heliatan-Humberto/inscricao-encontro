@@ -25,14 +25,15 @@ function Estrutura({ handleSubmit, listData }) {
         }
     }
 
+    function validarDados() {
+        return validarNome(list.nome) && validarTelefone(list.telefone)
+    }
 
     function handleChange(e) {
         setList({ ...list, [e.target.name]: e.target.value })
     }
 
-    function validarDados() {
-        return validarNome(list.nome) && validarTelefone(list.telefone)
-    }
+    //validar nome e telefone
 
     function validarNome(nome) {
 
