@@ -30,7 +30,6 @@ function Welcome() {
     return (
         <div className={styles.newproject_container}>
             <h1>Inscrição Encontro com Deus</h1>
-            <p>formulário de Inscrição:</p>
             <Estrutura handleSubmit={createPost}/>
         </div>
     )
