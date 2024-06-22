@@ -7,6 +7,7 @@ import Container from "./components/layout/Container"
 //pages
 import Welcome from './components/pages/Welcome';
 import Inscrito from  './components/pages/Inscrito'
+import Footer from './components/layout/Footer';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/Inscrito' element={<Inscrito />} />
         </Routes>
       </Container>
+      <Footer />
     </Router>
   );
 }
