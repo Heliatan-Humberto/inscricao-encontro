@@ -7,17 +7,32 @@ import SubmitButton from "./SubmitButton"
 
 
 function Estrutura({ handleSubmit, listData }) {
-
     const [list, setList] = useState(listData || {})
 
-
     const submit = (e) => {
-        e.preventDefault()
-        handleSubmit(list)
+        e.preventDefault();
+        if (validarDados()) {
+            handleSubmit(list);
+        } else {
+            alert('Por favor, insira os dados válidos.')
+        }
     }
 
     function handleChange(e) {
         setList({ ...list, [e.target.name]: e.target.value })
+    }
+
+    function validarDados() {
+        return validarNome(list.nome) && validarTelefone(list.telefone)
+    }
+
+    function validarNome(nome) {
+
+        return nome && nome.length > 0 && /^[A-Za-z\s]+$/.test(nome);
+    }
+
+    function validarTelefone(Telefone) {
+        return /^\d{11}$/.test(Telefone)
     }
 
     return (
@@ -28,7 +43,7 @@ function Estrutura({ handleSubmit, listData }) {
             name="nome"
             placeholder="Nome completo"
             handleOnChange={handleChange}
-            value={list.name}
+            value={list.nome ? list.nome: ''}
              />
             <Input
             type="Date"
