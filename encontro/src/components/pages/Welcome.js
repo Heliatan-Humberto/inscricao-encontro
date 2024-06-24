@@ -9,7 +9,7 @@ function Welcome() {
 
     function createPost(list) {
 
-        fetch("https://api-storage-tiaw-zeta.vercel.app/inscricoes", {
+        fetch("http://localhost:5000/inscricoes", {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
