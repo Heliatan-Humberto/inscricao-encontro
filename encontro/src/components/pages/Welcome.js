@@ -5,7 +5,6 @@ import styles from './Welcome.module.css'
 
 function Welcome() {
 
-    const navigate = useNavigate()
 
     function createPost(list) {
 
@@ -20,7 +19,7 @@ function Welcome() {
             .then((data) => {
                 console.log(data)
 
-                navigate('/Inscrito');
+                window.location.href = '/Inscrito';
             })
             .catch(err => console.log(err))
     }
