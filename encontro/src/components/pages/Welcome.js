@@ -9,7 +9,7 @@ function Welcome() {
 
     function createPost(list) {
 
-        fetch("https://api-storage-tiaw-zeta.vercel.app/inscricoes", {
+        fetch("http://localhost:5000/inscricoes", {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'
@@ -20,9 +20,7 @@ function Welcome() {
             .then((data) => {
                 console.log(data)
 
-                const state = { message: "inscrição realizada com sucesso" };
-                navigate("/Inscrito", (state));
-                //redirect
+                navigate('/Inscrito');
             })
             .catch(err => console.log(err))
     }

@@ -8,6 +8,7 @@ import Container from "./components/layout/Container"
 import Welcome from './components/pages/Welcome';
 import Inscrito from  './components/pages/Inscrito'
 import Footer from './components/layout/Footer';
+import Estrutura from './components/form/Estructure';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Welcome />} />
           <Route path='/Inscrito' element={<Inscrito />} />
+          <Route path='/Estructure' element={<Estrutura />} />
         </Routes>
       </Container>
       <Footer />
