@@ -9,8 +9,8 @@ function Welcome() {
 
     function createPost(list) {
 
-        fetch("https://api-storage-tiaw-zeta.vercel.app/inscricoes", {
-            method: 'POST',
+        fetch("http://localhost:8800", {
+            method: 'post',
             headers: {
                 'Content-type': 'application/json'
             },
@@ -23,8 +23,8 @@ function Welcome() {
                 navigate('/Inscrito');
             })
             .catch(err => console.log(err))
-    }
 
+        }
     return (
         <div className={styles.newproject_container}>
             <h1>Inscrição Encontro com Deus</h1>
