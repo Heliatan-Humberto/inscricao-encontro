@@ -9,7 +9,7 @@ function Welcome() {
 
     function createPost(list) {
 
-        fetch("http://localhost:8800", {
+        fetch("mysql://root:rajxgfKIRAcNxQHGnYyRZFynIqnyMWiz@mysql.railway.internal:3306/railway", {
             method: 'post',
             headers: {
                 'Content-type': 'application/json'
