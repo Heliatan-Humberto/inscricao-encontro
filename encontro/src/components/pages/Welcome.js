@@ -9,6 +9,7 @@ function Welcome() {
 
     function createPost(list) {
 
+        //conect
         fetch("mysql://root:rajxgfKIRAcNxQHGnYyRZFynIqnyMWiz@roundhouse.proxy.rlwy.net:59730/railway", {
             method: 'post',
             headers: {
