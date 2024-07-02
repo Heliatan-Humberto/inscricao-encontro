@@ -9,7 +9,7 @@ function Welcome() {
 
     function createPost(list) {
 
-        fetch("mysql.railway.internal", {
+        fetch("mysql://root:rajxgfKIRAcNxQHGnYyRZFynIqnyMWiz@roundhouse.proxy.rlwy.net:59730/railway", {
             method: 'post',
             headers: {
                 'Content-type': 'application/json'
